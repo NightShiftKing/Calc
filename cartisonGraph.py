@@ -39,7 +39,7 @@ class Coords():
             if str(e) != "range() arg 3 must not be zero": 
                 raise e 
             else:
-                self.increments = 1 
+                pass
 
 
               
@@ -56,6 +56,6 @@ class Coords():
 
         self.xAxis = (middleLeft, middleRight)
         self.yAxis = (topMiddle,bottomMiddle)
-        self.increments = 10
+        self.increments = self.increments
 
 

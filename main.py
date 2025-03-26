@@ -28,6 +28,7 @@ while not gameover:
             gameover = True
 
         if event.type == pygame.MOUSEWHEEL:
+            print(cordPlane.increments)
             cordPlane.increments += event.y
 
 
