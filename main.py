@@ -15,11 +15,7 @@ gameover = False
 clock = pygame.time.Clock()
 
 
-cordPlane = cartisonGraph.CartisonCords()
-
-
-
-
+cordPlane = cartisonGraph.cords()
 
 
 while not gameover:
@@ -41,11 +37,11 @@ while not gameover:
     #keyboard input-----------------------------------
 
 
-    cordPlane.update()
+    cordPlane.UPDATE()
     #render section-----------------------------------vis
     screen.fill((150,150,150))
 
-    cordPlane.drawCartisonCords(screen) 
+    cordPlane.draw(screen) 
 
 
 

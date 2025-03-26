@@ -1,6 +1,6 @@
 import pygame
 
-class CartisonCords():
+class cords():
     def __init__(self ):
 
         
@@ -25,7 +25,7 @@ class CartisonCords():
 
 
 
-    def drawCartisonCords(self, screen):
+    def draw(self, screen):
         pygame.draw.line(screen, self.BLACK, self.X_Axis[0], self.X_Axis[1])
         pygame.draw.line(screen, self.BLACK, self.Y_Axis[0], self.Y_Axis[1])
 
@@ -44,7 +44,7 @@ class CartisonCords():
 
               
 
-    def update(self):
+    def UPDATE(self):
         WIDTH , HEIGHT = pygame.display.get_surface().get_size()
         TOP_MIDDLE = (WIDTH/2, 0)
         BOTTOM_MIDDLE = (WIDTH/2, HEIGHT)
