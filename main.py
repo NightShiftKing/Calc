@@ -15,7 +15,7 @@ gameover = False
 clock = pygame.time.Clock()
 
 
-cordPlane = cartisonGraph.cords()
+cordPlane = cartisonGraph.Coords()
 
 
 while not gameover:
@@ -28,16 +28,14 @@ while not gameover:
             gameover = True
 
         if event.type == pygame.MOUSEWHEEL:
-            if cordPlane.Increments >= 1:
-                cordPlane.Increments += event.y
-            else:
-                cordPlane.Increments = cordPlane.Increments = 1
+            cordPlane.increments += event.y
+
 
             
     #keyboard input-----------------------------------
 
 
-    cordPlane.UPDATE()
+    cordPlane.update()
     #render section-----------------------------------vis
     screen.fill((150,150,150))
 
