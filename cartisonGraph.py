@@ -30,16 +30,12 @@ class Coords():
         pygame.draw.line(screen, self.BLACK, self.yAxis[0], self.yAxis[1])
 
         #draws the tick marks for x axis
-        try:
-            for i in range(self.xAxis[0][0], self.xAxis[1][0], self.increments):
+        self.increments = self.increments if self.increments >=1 else 1
+        for i in range(self.xAxis[0][0], self.xAxis[1][0], self.increments):
                 
-                pygame.draw.line(screen, self.BLACK, (i, self.xAxis[0][1]+5), (i, self.xAxis[0][1]-5))  
-                pygame.draw.line(screen, self.BLACK, (self.yAxis[0][0]+5,i ), (self.yAxis[0][0]-5,i )) 
-        except ValueError as e:
-            if str(e) != "range() arg 3 must not be zero": 
-                raise e 
-            else:
-                pass
+            pygame.draw.line(screen, self.BLACK, (i, self.xAxis[0][1]+5), (i, self.xAxis[0][1]-5))  
+            pygame.draw.line(screen, self.BLACK, (self.yAxis[0][0]+5,i ), (self.yAxis[0][0]-5,i )) 
+             
 
 
               
